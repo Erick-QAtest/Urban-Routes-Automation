@@ -1,254 +1,108 @@
-# Proyecto de Automatización: Urban Routes
+# Project: Automation – Urban Routes  
 
-## Descripción del Proyecto
+## Project Description  
 
-Este proyecto contiene un conjunto de pruebas de automatización para la aplicación web "Urban Routes". El objetivo principal es simular el flujo completo de un usuario al solicitar un taxi, desde la selección de origen y destino hasta la confirmación final del pedido, incluyendo la configuración de opciones adicionales y la gestión de pagos con tarjeta de crédito.
+This project contains a set of automated tests for the "Urban Routes" web application.  
+The main goal is to simulate the complete user flow when requesting a taxi — from selecting origin and destination to the final order confirmation, including additional options and payment with a credit card.  
 
-Las pruebas están diseñadas para verificar la funcionalidad crítica de la aplicación y asegurar una experiencia de usuario fluida y sin errores.
+The tests are designed to verify critical application functionality and ensure a smooth, error-free user experience.  
 
-## Tecnologías y Técnicas Utilizadas
+## Technologies and Techniques Used  
 
-* **Python 3.x:** Lenguaje de programación principal utilizado para escribir los scripts de automatización.
-* **Selenium WebDriver:** Framework de automatización web para interactuar con el navegador.
-* **Pytest:** Framework de pruebas para estructurar y ejecutar las pruebas de manera eficiente.
-* **WebDriver Manager:** Biblioteca para gestionar automáticamente los controladores del navegador (ChromeDriver en este caso), eliminando la necesidad de descargarlos y configurarlos manualmente.
-* **Patrón Page Object Model (POM):** Las pruebas están organizadas utilizando el patrón POM, lo que mejora la reusabilidad del código, la legibilidad y la mantenibilidad al separar los elementos de la página y las interacciones de la lógica de las pruebas.
-* **Manejo de Waits (Esperas Explícitas):** Se utilizan `WebDriverWait` con `ExpectedConditions` para manejar los elementos dinámicos de la interfaz de usuario, asegurando que los elementos estén presentes y sean interactuables antes de realizar acciones sobre ellos. Se han incluido `time.sleep()` estratégicos en puntos críticos para manejar transiciones o cargas asíncronas cuando las esperas explícitas no eran suficientes por sí solas.
-* **Intercepción de Logs de Rendimiento:** Se utiliza la capacidad de Selenium para acceder a los logs de rendimiento del navegador, lo que permite interceptar solicitudes de red y extraer datos como códigos SMS de confirmación.
-* **Ejecución de JavaScript:** En algunos casos, se recurre a la ejecución de JavaScript directamente en el navegador para interactuar con elementos que pueden ser difíciles de cliquear mediante los métodos estándar de Selenium (e.g., elementos cubiertos por otros o con eventos de clic complejos).
+* **Python 3.x:** Main programming language used to write automation scripts.  
+* **Selenium WebDriver:** Web automation framework to interact with the browser.  
+* **Pytest:** Testing framework used to structure and execute tests efficiently.  
+* **WebDriver Manager:** Library to automatically manage browser drivers (e.g., ChromeDriver).  
+* **Page Object Model (POM):** The tests are structured with POM, improving reusability, readability, and maintainability by separating page elements and interactions from test logic.  
+* **Explicit Waits:** `WebDriverWait` with `ExpectedConditions` is used to handle dynamic elements, ensuring elements are present and interactable before performing actions. Strategic `time.sleep()` calls are included at critical points for asynchronous transitions.  
+* **Performance Log Interception:** Selenium’s ability to access browser performance logs is used to intercept network requests and extract data such as SMS confirmation codes.  
+* **JavaScript Execution:** In some cases, direct JavaScript execution is used to interact with tricky elements (e.g., covered or non-standard clickable elements).  
 
-## Estructura del Proyecto
-
-¡Absolutamente! Un buen README.md es esencial para cualquier proyecto, especialmente uno de automatización. Aquí tienes una plantilla completa que puedes usar para tu proyecto, escrita en Markdown para que la copies directamente en tu archivo README.md.
-
-Markdown
-
-# Proyecto de Automatización: Urban Routes
-
-## Descripción del Proyecto
-
-Este proyecto contiene un conjunto de pruebas de automatización para la aplicación web "Urban Routes". El objetivo principal es simular el flujo completo de un usuario al solicitar un taxi, desde la selección de origen y destino hasta la confirmación final del pedido, incluyendo la configuración de opciones adicionales y la gestión de pagos con tarjeta de crédito.
-
-Las pruebas están diseñadas para verificar la funcionalidad crítica de la aplicación y asegurar una experiencia de usuario fluida y sin errores.
-
-## Tecnologías y Técnicas Utilizadas
-
-* **Python 3.x:** Lenguaje de programación principal utilizado para escribir los scripts de automatización.
-* **Selenium WebDriver:** Framework de automatización web para interactuar con el navegador.
-* **Pytest:** Framework de pruebas para estructurar y ejecutar las pruebas de manera eficiente.
-* **WebDriver Manager:** Biblioteca para gestionar automáticamente los controladores del navegador (ChromeDriver en este caso), eliminando la necesidad de descargarlos y configurarlos manualmente.
-* **Patrón Page Object Model (POM):** Las pruebas están organizadas utilizando el patrón POM, lo que mejora la reusabilidad del código, la legibilidad y la mantenibilidad al separar los elementos de la página y las interacciones de la lógica de las pruebas.
-* **Manejo de Waits (Esperas Explícitas):** Se utilizan `WebDriverWait` con `ExpectedConditions` para manejar los elementos dinámicos de la interfaz de usuario, asegurando que los elementos estén presentes y sean interactuables antes de realizar acciones sobre ellos. Se han incluido `time.sleep()` estratégicos en puntos críticos para manejar transiciones o cargas asíncronas cuando las esperas explícitas no eran suficientes por sí solas.
-* **Intercepción de Logs de Rendimiento:** Se utiliza la capacidad de Selenium para acceder a los logs de rendimiento del navegador, lo que permite interceptar solicitudes de red y extraer datos como códigos SMS de confirmación.
-* **Ejecución de JavaScript:** En algunos casos, se recurre a la ejecución de JavaScript directamente en el navegador para interactuar con elementos que pueden ser difíciles de cliquear mediante los métodos estándar de Selenium (e.g., elementos cubiertos por otros o con eventos de clic complejos).
-
-## Estructura del Proyecto
+## Project Structure  
 
 qa-project-Urban-Routes-es/
-├── .venv/                      # Entorno virtual de Python
-├── data.py                     # Archivo para almacenar datos de prueba (URL, credenciales, etc.)
-├── main.py                     # Script para ejecutar la prueba manualmente (opcional)
-├── test_urban_routes.py        # Archivo principal de las pruebas de Pytest
-├── urban_routes_page.py        # Implementación del Page Object Model
-└── utils.py                    # Funciones de utilidad (ej. para extraer códigos del log)
-└── README.md                   # Este archivo
+├── .venv/ # Python virtual environment
+├── data.py # Test data (URLs, phone numbers, card info, etc.)
+├── test_urban_routes.py # Main test suite (Pytest)
+├── urban_routes_page.py # Page Object Model implementation
+├── utils.py # Utility functions (e.g., SMS code retrieval)
+└── README.md # This documentation
 
+bash
+Copiar código
 
-## Instrucciones para Ejecutar las Pruebas
+## Setup and Execution  
 
-Sigue estos pasos para configurar y ejecutar las pruebas de automatización en tu entorno local:
+### 1. Requirements  
 
-### 1. Requisitos Previos
+Make sure you have installed:  
+* **Python 3.8+** (latest stable recommended)  
+* **pip** (Python package manager)  
 
-Asegúrate de tener instalado:
-
-* **Python 3.8+** (preferiblemente la última versión estable)
-* **pip** (gestor de paquetes de Python)
-
-### 2. Configuración del Entorno Virtual
-
-Es altamente recomendable usar un entorno virtual para gestionar las dependencias del proyecto.
+### 2. Create Virtual Environment  
 
 ```bash
-# Navega al directorio raíz de tu proyecto
-cd /path/to/your/qa-project-Urban-Routes-es
-
-# Crea un entorno virtual (si aún no existe)
+cd /path/to/qa-project-Urban-Routes-es
 python3 -m venv .venv
+Activate the environment:
 
-# Activa el entorno virtual
-# En macOS/Linux:
+macOS/Linux:
+
+bash
+Copiar código
 source .venv/bin/activate
-# En Windows (CMD):
+Windows (CMD):
+
+cmd
+Copiar código
 .venv\Scripts\activate.bat
-# En Windows (PowerShell):
+Windows (PowerShell):
+
+powershell
+Copiar código
 .venv\Scripts\Activate.ps1
-3. Instalación de Dependencias
-Una vez activado el entorno virtual, instala las bibliotecas necesarias:
+3. Install Dependencies
+bash
+Copiar código
+pip install -r requirements.txt
+requirements.txt should include:
 
-Bash
+nginx
+Copiar código
+selenium
+pytest
+webdriver-manager
+4. Configure Test Data
+Edit data.py with your test values:
 
-pip install selenium pytest webdriver-manager
-
-4. Configuración de Datos de Prueba
-Edita el archivo data.py en el directorio raíz de tu proyecto para incluir los datos necesarios para las pruebas, como la URL de la aplicación, direcciones, números de teléfono de prueba, detalles de tarjeta de crédito (si son de prueba/seguros):
-
-Python
+python
+Copiar código
 # data.py
-urban_routes_url = "[https://tu-url-de-la-aplicacion-urban-routes.com](https://tu-url-de-la-aplicacion-urban-routes.com)" # ¡Reemplaza con la URL real!
+urban_routes_url = "https://your-urban-routes-url"
 address_from = "East 2nd Street, 601"
 address_to = "1300 1st St"
-phone_number = "+11234567890" # Asegúrate de que este número sea válido para recibir SMS de prueba
-card_number = "1234 5678 9012 3456" # Usa un número de tarjeta de prueba seguro
-card_cvv = "123" # Usa un CVV de prueba seguro
-Asegúrate de usar datos de prueba válidos y seguros. Nunca uses datos reales de tarjetas de crédito o información personal sensible.
+phone_number = "+1 123 456 7890"
+card_number = "4242 4242 4242 4242"
+card_cvv = "123"
+⚠ Use safe test data only — never real card numbers or personal info.
 
-5. Ejecutar las Pruebas
-Con el entorno virtual activado, puedes ejecutar las pruebas utilizando Pytest desde el directorio raíz del proyecto:
+5. Run Tests
+Run all tests:
 
-Bash
+bash
+Copiar código
+pytest -v
+Run with debug prints:
 
-pytest
-Para ver la salida detallada de print() durante la ejecución (útil para el debugging):
-
-Bash
+bash
+Copiar código
 pytest -s
+Run a specific test:
 
-Para ejecutar una prueba específica:
-
-Bash
-pytest test_urban_routes.py::TestUrbanRoutes::test_full_order
-
-6. Desactivar el Entorno Virtual
-Cuando hayas terminado de trabajar con el proyecto, puedes desactivar el entorno virtual:
-
-Bash
-
-deactivate
-# Proyecto de Automatización: Urban Routes
-
-## Descripción del Proyecto
-
-Este proyecto contiene un conjunto de pruebas de automatización para la aplicación web "Urban Routes". El objetivo principal es simular el flujo completo de un usuario al solicitar un taxi, desde la selección de origen y destino hasta la confirmación final del pedido, incluyendo la configuración de opciones adicionales y la gestión de pagos con tarjeta de crédito.
-
-Las pruebas están diseñadas para verificar la funcionalidad crítica de la aplicación y asegurar una experiencia de usuario fluida y sin errores.
-
-## Tecnologías y Técnicas Utilizadas
-
-* **Python 3.x:** Lenguaje de programación principal utilizado para escribir los scripts de automatización.
-* **Selenium WebDriver:** Framework de automatización web para interactuar con el navegador.
-* **Pytest:** Framework de pruebas para estructurar y ejecutar las pruebas de manera eficiente.
-* **WebDriver Manager:** Biblioteca para gestionar automáticamente los controladores del navegador (ChromeDriver en este caso), eliminando la necesidad de descargarlos y configurarlos manualmente.
-* **Patrón Page Object Model (POM):** Las pruebas están organizadas utilizando el patrón POM, lo que mejora la reusabilidad del código, la legibilidad y la mantenibilidad al separar los elementos de la página y las interacciones de la lógica de las pruebas.
-* **Manejo de Waits (Esperas Explícitas):** Se utilizan `WebDriverWait` con `ExpectedConditions` para manejar los elementos dinámicos de la interfaz de usuario, asegurando que los elementos estén presentes y sean interactuables antes de realizar acciones sobre ellos. Se han incluido `time.sleep()` estratégicos en puntos críticos para manejar transiciones o cargas asíncronas cuando las esperas explícitas no eran suficientes por sí solas.
-* **Intercepción de Logs de Rendimiento:** Se utiliza la capacidad de Selenium para acceder a los logs de rendimiento del navegador, lo que permite interceptar solicitudes de red y extraer datos como códigos SMS de confirmación.
-* **Ejecución de JavaScript:** En algunos casos, se recurre a la ejecución de JavaScript directamente en el navegador para interactuar con elementos que pueden ser difíciles de cliquear mediante los métodos estándar de Selenium (e.g., elementos cubiertos por otros o con eventos de clic complejos).
-
-## Estructura del Proyecto
-
-¡Absolutamente! Un buen README.md es esencial para cualquier proyecto, especialmente uno de automatización. Aquí tienes una plantilla completa que puedes usar para tu proyecto, escrita en Markdown para que la copies directamente en tu archivo README.md.
-
-Markdown
-
-# Proyecto de Automatización: Urban Routes
-
-## Descripción del Proyecto
-
-Este proyecto contiene un conjunto de pruebas de automatización para la aplicación web "Urban Routes". El objetivo principal es simular el flujo completo de un usuario al solicitar un taxi, desde la selección de origen y destino hasta la confirmación final del pedido, incluyendo la configuración de opciones adicionales y la gestión de pagos con tarjeta de crédito.
-
-Las pruebas están diseñadas para verificar la funcionalidad crítica de la aplicación y asegurar una experiencia de usuario fluida y sin errores.
-
-## Tecnologías y Técnicas Utilizadas
-
-* **Python 3.x:** Lenguaje de programación principal utilizado para escribir los scripts de automatización.
-* **Selenium WebDriver:** Framework de automatización web para interactuar con el navegador.
-* **Pytest:** Framework de pruebas para estructurar y ejecutar las pruebas de manera eficiente.
-* **WebDriver Manager:** Biblioteca para gestionar automáticamente los controladores del navegador (ChromeDriver en este caso), eliminando la necesidad de descargarlos y configurarlos manualmente.
-* **Patrón Page Object Model (POM):** Las pruebas están organizadas utilizando el patrón POM, lo que mejora la reusabilidad del código, la legibilidad y la mantenibilidad al separar los elementos de la página y las interacciones de la lógica de las pruebas.
-* **Manejo de Waits (Esperas Explícitas):** Se utilizan `WebDriverWait` con `ExpectedConditions` para manejar los elementos dinámicos de la interfaz de usuario, asegurando que los elementos estén presentes y sean interactuables antes de realizar acciones sobre ellos. Se han incluido `time.sleep()` estratégicos en puntos críticos para manejar transiciones o cargas asíncronas cuando las esperas explícitas no eran suficientes por sí solas.
-* **Intercepción de Logs de Rendimiento:** Se utiliza la capacidad de Selenium para acceder a los logs de rendimiento del navegador, lo que permite interceptar solicitudes de red y extraer datos como códigos SMS de confirmación.
-* **Ejecución de JavaScript:** En algunos casos, se recurre a la ejecución de JavaScript directamente en el navegador para interactuar con elementos que pueden ser difíciles de cliquear mediante los métodos estándar de Selenium (e.g., elementos cubiertos por otros o con eventos de clic complejos).
-
-## Estructura del Proyecto
-
-qa-project-Urban-Routes-es/
-├── .venv/                      # Entorno virtual de Python
-├── data.py                     # Archivo para almacenar datos de prueba (URL, credenciales, etc.)
-├── main.py                     # Script para ejecutar la prueba manualmente (opcional)
-├── test_urban_routes.py        # Archivo principal de las pruebas de Pytest
-├── urban_routes_page.py        # Implementación del Page Object Model
-└── utils.py                    # Funciones de utilidad (ej. para extraer códigos del log)
-└── README.md                   # Este archivo
-
-
-## Instrucciones para Ejecutar las Pruebas
-
-Sigue estos pasos para configurar y ejecutar las pruebas de automatización en tu entorno local:
-
-### 1. Requisitos Previos
-
-Asegúrate de tener instalado:
-
-* **Python 3.8+** (preferiblemente la última versión estable)
-* **pip** (gestor de paquetes de Python)
-
-### 2. Configuración del Entorno Virtual
-
-Es altamente recomendable usar un entorno virtual para gestionar las dependencias del proyecto.
-
-```bash
-# Navega al directorio raíz de tu proyecto
-cd /path/to/your/qa-project-Urban-Routes-es
-
-# Crea un entorno virtual (si aún no existe)
-python3 -m venv .venv
-
-# Activa el entorno virtual
-# En macOS/Linux:
-source .venv/bin/activate
-# En Windows (CMD):
-.venv\Scripts\activate.bat
-# En Windows (PowerShell):
-.venv\Scripts\Activate.ps1
-3. Instalación de Dependencias
-Una vez activado el entorno virtual, instala las bibliotecas necesarias:
-
-Bash
-
-pip install selenium pytest webdriver-manager
-
-4. Configuración de Datos de Prueba
-Edita el archivo data.py en el directorio raíz de tu proyecto para incluir los datos necesarios para las pruebas, como la URL de la aplicación, direcciones, números de teléfono de prueba, detalles de tarjeta de crédito (si son de prueba/seguros):
-
-Python
-# data.py
-urban_routes_url = "[https://tu-url-de-la-aplicacion-urban-routes.com](https://tu-url-de-la-aplicacion-urban-routes.com)" # ¡Reemplaza con la URL real!
-address_from = "East 2nd Street, 601"
-address_to = "1300 1st St"
-phone_number = "+11234567890" # Asegúrate de que este número sea válido para recibir SMS de prueba
-card_number = "1234 5678 9012 3456" # Usa un número de tarjeta de prueba seguro
-card_cvv = "123" # Usa un CVV de prueba seguro
-Asegúrate de usar datos de prueba válidos y seguros. Nunca uses datos reales de tarjetas de crédito o información personal sensible.
-
-5. Ejecutar las Pruebas
-Con el entorno virtual activado, puedes ejecutar las pruebas utilizando Pytest desde el directorio raíz del proyecto:
-
-Bash
-
-pytest
-Para ver la salida detallada de print() durante la ejecución (útil para el debugging):
-
-Bash
-pytest -s
-
-Para ejecutar una prueba específica:
-
-Bash
-pytest test_urban_routes.py::TestUrbanRoutes::test_full_order
-
-6. Desactivar el Entorno Virtual
-Cuando hayas terminado de trabajar con el proyecto, puedes desactivar el entorno virtual:
-
-Bash
-
+bash
+Copiar código
+pytest test_urban_routes.py::TestUrbanRoutes::test_add_card
+6. Deactivate Virtual Environment
+bash
+Copiar código
 deactivate
