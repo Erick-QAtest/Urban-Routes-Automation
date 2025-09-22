@@ -1,0 +1,30 @@
+# --- Python ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# --- Virtual environments ---
+.venv/
+env/
+venv/
+
+# --- Selenium / Drivers ---
+chromedriver
+geckodriver.log
+
+# --- Test outputs ---
+*.log
+*.xml
+*.html
+*.png
+
+# --- System / OS ---
+.DS_Store
+Thumbs.db
+
+# --- Archives ---
+*.zip
+*.tar
+*.gz
+*.rar
