@@ -1,5 +1,9 @@
 # 🧭 Urban Routes – End-to-End UI Automation Project  
 
+<p align="center">
+  <img src="urban_routes_banner.png" alt="Urban Routes Automation Banner" width="100%">
+</p>
+
 [![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python)](https://www.python.org/)
 [![Selenium](https://img.shields.io/badge/Selenium-WebDriver-success?logo=selenium)
 ](https://www.selenium.dev/)
@@ -58,6 +62,7 @@ pip install -r requirements.txt
 
 3️⃣ Run all tests
 pytest -v
+
 
 
 
