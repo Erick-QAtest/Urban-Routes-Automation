@@ -28,3 +28,7 @@ Thumbs.db
 *.tar
 *.gz
 *.rar
+
+# --- IDE config ---
+.idea/
+*.iml
