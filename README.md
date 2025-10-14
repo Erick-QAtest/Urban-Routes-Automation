@@ -1,3 +1,5 @@
+[![Portfolio Project](https://img.shields.io/badge/Portfolio-Project-blue)]()
+
 # 🧭 Urban Routes – End-to-End UI Automation Project  
 
 <p align="center">
@@ -66,6 +68,7 @@ pytest -v
 *Erick Noé Cortés Peña*  
 📍 Guadalajara, Jalisco, MX  
 🔗 [LinkedIn](https://www.linkedin.com/in/erick-noe-cortes) | [GitHub](https://github.com/Erick-QAtest)
+
 
 
 
