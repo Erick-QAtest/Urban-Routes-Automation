@@ -63,6 +63,11 @@ pip install -r requirements.txt
 3️⃣ Run all tests
 pytest -v
 
+*Erick Noé Cortés Peña*  
+📍 Guadalajara, Jalisco, MX  
+🔗 [LinkedIn](https://www.linkedin.com/in/erick-noe-cortes) | [GitHub](https://github.com/Erick-QAtest)
+
+
 
 
 
