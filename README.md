@@ -42,6 +42,11 @@ The suite validates the entire taxi-booking flow — from setting addresses to c
 - 🧠 **Utils for SMS code retrieval & safe click helpers**
 
 ---
+## Why this project matters
+
+This automation suite focuses on critical user paths that directly impact user trust and business value, such as payments, confirmations, and optional add-ons.
+
+The goal is not only to automate tests, but to prevent regressions in high-risk flows.
 
 ## 📂 Project Structure
 
@@ -69,6 +74,7 @@ pytest -v
 *Erick Noé Cortés Peña*  
 📍 Guadalajara, Jalisco, MX  
 🔗 [LinkedIn](https://www.linkedin.com/in/erick-noe-cortes) | [GitHub](https://github.com/Erick-QAtest)
+
 
 
 
