@@ -15,6 +15,7 @@
 ![License](https://img.shields.io/badge/License-MIT-lightgrey)
 
 ---
+This project demonstrates my approach to building stable, maintainable end-to-end UI automation for real-world applications, focusing on user flows, reliability, and clear test structure.
 
 ## 🚀 Project Overview  
 Automated **end-to-end UI tests** for the Urban Routes web app.  
@@ -68,6 +69,7 @@ pytest -v
 *Erick Noé Cortés Peña*  
 📍 Guadalajara, Jalisco, MX  
 🔗 [LinkedIn](https://www.linkedin.com/in/erick-noe-cortes) | [GitHub](https://github.com/Erick-QAtest)
+
 
 
 
